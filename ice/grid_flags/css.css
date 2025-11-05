@@ -1,0 +1,204 @@
+/* I used these variables to make it so they are all perfectly propotional to the sizes and dimesnions of the acutal flags. I did use AI to help learn how to make this funciton and to help me come up with the function put I typed everything. */
+
+#denmark {
+    --cols: 37;
+    --rows: 28;
+    --dcell-size: calc(300px / var(--cols));
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), var(--dcell-size));
+    height: calc(var(--rows), var(--dcell-size));
+    width: 300px;
+    background-color: #ffffff;
+
+}
+
+    #dred1 {
+        grid-column: 1 / 13;
+        grid-row: 1 / 13;
+        background-color: #C8102E;
+    }
+
+    #dred2 {
+        grid-column: 1 / 13;
+        grid-row: 17 / 29;
+        background-color: #C8102E;
+    }
+
+    #dred3 {
+        grid-column: 17 / 38;
+        grid-row: 17 / 29;
+        background-color: #C8102E;
+    }
+
+    #dred4 {
+        grid-column: 17 / 38;
+        grid-row: 1 / 13;
+        background-color: #C8102E;
+    }
+
+#finland {
+    --cols: 18;
+    --rows: 11;
+    --fcell-size: calc(300px / var(--cols));
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), var(--fcell-size));
+    height: calc(var(--rows), var(--dcell-size));
+    width: 300px;
+    background-color: #002F6C;
+
+}
+
+    #fwhite1 {
+        grid-column: 1 / 6;
+        grid-row: 1 / 5;
+        background-color: #ffffff;
+    }
+
+    #fwhite2 {
+        grid-column: 1 / 6;
+        grid-row: 8 / 12;
+        background-color: #ffffff;
+    }
+
+    #fwhite3 {
+        grid-column: 9 / 19;
+        grid-row: 1 / 5;
+        background-color: #ffffff;
+    }
+
+    #fwhite4 {
+        grid-column: 9 / 19;
+        grid-row: 8 / 12;
+        background-color: #ffffff;
+    }
+
+#benin {
+
+    --cols: 15;
+    --rows: 10;
+    --bcell-size: calc(300px / var(--cols));
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), var(--bcell-size));
+    height: calc(var(--rows), var(--dcell-size));
+    width: 300px;
+    background-color: #002F6C;
+
+}
+
+    #bgreen {
+        grid-column: 1 / 7;
+        grid-row: 1 / 11;
+        background-color: #008751;
+    }
+
+    #byellow {
+        grid-column: 7 / 16;
+        grid-row: 1 / 6;
+        background-color: #FCD116;
+    }
+
+    #bred {
+        grid-column: 7 / 16;
+        grid-row: 6 / 11;
+        background-color: #E8112D;
+    }
+
+#italy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 200px;
+}
+    #igreen {
+        background-color: #008C45;
+    }
+
+    #iwhite {
+        background-color: #F4F9FF;
+    }
+
+    #ired {
+        background-color: #CD212A;
+    }
+
+#car {
+    --cols: 200;
+    --rows: 120;
+    --bcell-size: calc(300px / var(--cols));
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), var(--bcell-size));
+    height: calc(var(--rows), var(--dcell-size));
+    width: 300px;
+    background-color: #003082;
+    z-index: -1;
+}
+
+    #caryellow1 {
+        background: #FFCE00;
+        width: 40.5px;
+        clip-path: polygon( 50% 5%, 79% 95%, 2% 40%, 98% 40%, 21% 95%);
+        aspect-ratio: 1;   
+    }
+
+    #box {
+        display: grid;
+        grid-column: 1 / 61;
+        grid-row: 1 / 31 ;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #caryellow2 {
+        background-color: #FFCE00;
+        grid-column: 1 / 86;
+        grid-row: 91 / 121;
+    }
+
+    #caryellow3 {
+        background-color: #FFCE00;
+        grid-column: 116 / 201;
+        grid-row: 91 / 121;
+    }
+    
+    #carblue1 {
+        background-color: #003082;
+        grid-column: 116 / 201;
+        grid-row: 1 / 31;
+    }
+
+    #carblue2 {
+        background-color: #D21034;
+        grid-column: 86 / 116;
+        grid-row: 1 / 121;
+        z-index: 0;
+    }
+
+    #carwhite1 {
+        background-color: #FFFFFF;
+        grid-column: 1 / 86;
+        grid-row: 31 / 61;
+    }
+
+    #carwhite2 {
+        background-color: #FFFFFF;
+        grid-column: 116 / 201;
+        grid-row: 31 / 61;
+    }
+
+    #cargreen1 {
+        background-color: #289728;
+        grid-column: 1 / 86;
+        grid-row: 61 / 91;
+    }
+
+    #cargreen2 {
+        background-color: #289728;
+        grid-column: 116 / 201;
+        grid-row: 61 / 91;
+    }
+
+    

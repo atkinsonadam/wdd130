@@ -1,0 +1,304 @@
+/* General */
+
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Libre Baskerville', Georgia, Serif;
+}
+
+p, ul, li {
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.margin {
+    margin: 4vw;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', Georgia, Serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* End General/
+
+/* Start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5vw 20px 20px;
+}
+
+#logo {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', Georgia, Serif;
+    font-size: 1.15em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* End Header */
+
+/* Start Hero Section */
+
+#hero_section {
+    width: 100%;
+    position: relative;
+}
+
+#hero_section img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#text_container {
+    width: 66.6%;
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+#text_container h1, #text_container p, #text_container button {
+    display: inline;
+    text-align: center;
+    flex-direction: column;
+}
+
+#text_container h1 {
+    font-size: 4.75vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#text_container p {
+    margin: 2vh auto;
+    width: 50vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#text_container button {
+    background-color: #00000000;
+    color: white;
+    font-size: 2vw;
+    border-color: white;
+    border-radius: 3vw;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .75vw;
+}
+
+/* End Hero Section */
+
+/* Start Statistics Section */
+
+#statistics_section {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #065a82;
+    text-align: center;
+}
+
+#statistics_section h3 {
+    font-size: 2em;
+    margin: 1vw;
+}
+
+#statistics_section p {
+    font-size: 3vw;
+    margin: 1vw;
+    font-weight: 800;
+    font-family: 'Libre Baskerville', Georgia, Serif;
+}
+
+#stats_one {
+    border-right: solid #065a82 2px;
+}
+
+#stats_three {
+    border-left: solid #065a82 2px;
+
+}
+
+/* Start image_and_text_section */
+
+#image_and_text_section {
+    border: solid 2px #065a82;
+    padding: 5vw;
+    border-radius: 3vw;
+    display: grid;
+    gap: 5vw;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+#imagetext_section_text {
+    grid-column: 1/2;
+}
+
+#imagetext_section_text h2 {
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
+
+#imagetext_section_text p, #imagetext_section_text ul {
+    font-size: 2.25vw;
+}
+
+#meimage {
+    width: 100%;
+    grid-column: 2/3;
+    border-radius: 3vw;
+    align-self: center;
+}
+/* End image_and_text_section */
+
+/* Start Table Section */
+
+#table_section {
+    justify-items: center;
+    text-align: center;
+    margin-top: 5vw;
+}
+
+#table_section h2 {
+    font-size: 3.5vw;
+}
+
+#table_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+    width: 100%;
+}
+
+.table_item {
+    width: 100%;
+}
+
+.table_item img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* End Table Section*/
+
+/* Start Form */
+
+#form_container {
+    border: solid 2px #065a82;
+    padding: 5vw;
+    border-radius: 3vw;
+    text-align: center;
+}
+
+#form_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
+}
+
+#form_container h2 {
+    font-size: 5vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+}
+
+#form_container p {
+    font-size: 2.5vw;
+}
+
+.label_container {
+
+    margin-bottom: 5px;
+}
+
+.label {
+    font-size: 2.5vw;
+    width: 100%;
+    text-align: left;
+}
+
+#form_container input {
+    color: white;
+    background-color: black;
+    border: solid 1px #065a82;
+    border-radius: 10px;
+    font-size: 2.5vw;
+    padding: 5px;
+}
+
+.form_input {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#form_button {
+    background-color: #00000000;
+    color: #065a82;
+    font-size: 2vw;
+    border-color: #065a82;
+    border-radius: 3vw;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .75vw;
+    grid-column: 1/3;
+}
+
+#form_button_container {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+form {
+    margin: 0;
+}
+/* End Form */
+
+/* Start Footer */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    text-align: center;
+
+}
+
+#bottom_logo {
+    width: 15vw;
+}
+
+/* End Footer */

@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Creepster";
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 25px;
+    gap: 125px;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    color: orange;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    color: purple;
+    text-shadow: 3px 3px 20px yellow;
+    font-family: "Metal Mania";
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 35%;
+    height: auto;
+}
+
+img:hover {
+    animation: smooth-rock 2s ease-in-out alternate infinite;
+}
+
+@keyframes smooth-rock {
+  0%   { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+    }
+
+h2 {
+    color: orange;
+}
+
+p {
+    color: lightgreen;
+    width: 75%;
+    margin: 0 auto;
+    border: dotted orange;
+    border-radius: 25px;
+    padding: 25px;
+    font-family: "Mystery Quest";
+}
+
+section {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+footer {
+    color: orange;
+    margin-top: 50px;
+}
