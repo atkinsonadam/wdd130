@@ -184,35 +184,35 @@ nav a:hover {
 }
 /* End image_and_text_section */
 
-/* Start Table Section */
 
-#table_section {
+/* Table Start */
+
+.cell {
+    padding-right: 10px;
+    padding-left: 10px;
     justify-items: center;
     text-align: center;
-    margin-top: 5vw;
 }
 
-#table_section h2 {
-    font-size: 3.5vw;
-}
-
-#table_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5vw;
-    width: 100%;
-}
-
-.table_item {
-    width: 100%;
-}
-
-.table_item img {
-    width: 100%;
+.cell img {
     border-radius: 25px;
+    width: 30vw;
+    height: 20vw;
 }
 
-/* End Table Section*/
+#table {
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#table_header {
+    font-size: 2em;
+}
+
+/* End Table */
+
 
 /* Start Form */
 
@@ -302,3 +302,36 @@ footer {
 }
 
 /* End Footer */
+
+/* Start Grid Ice Section */
+
+#table_section {
+    justify-items: center;
+    text-align: center;
+    margin-top: 5vw;
+}
+
+#table_section h2 {
+    font-size: 3.5vw;
+}
+
+#table_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+    width: 100%;
+}
+
+.table_item {
+    width: 100%;
+}
+
+.table_item img {
+    width: 100%;
+    border-radius: 25px;
+    padding: 3px;
+    border: solid #065a82 3px ;
+}
+
+/* End Grid Ice Section*/
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+        }
+
+        #formContainer {
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 15px;
+            background-color: white;
+            position: relative;
+            z-index: 0;
+            border-radius: 35px;
+            height: 800px;
+        }
+
+        #formContainer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: solid #1513b2 12px;
+            border-radius: 35px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+
+        /* SHOW ONLY TOP HALF */
+        #jesus {
+            width: 100%;
+            clip-path: inset(0 0 35% 0);
+            overflow: hidden;
+            border-radius: 35px 35px 0 0;
+        }
+
+        #jesus_container h1, #jesus_container h2 {
+            position: relative;
+            text-align: center;
+            transform: translateY(-275px);
+            color: white;
+            text-shadow: 3px 3px 2px black; 
+        }
+
+        #jesus_container h1 {
+            font-size: 3em;
+            font-weight: 600px;
+        }
+
+        #jesus_container h2 {
+            font-size: 2em;
+
+        }
+        
+        h3 {
+            text-align: center;
+        }
+
+        #translate {
+            position: absolute;
+            transform: translateY(-210px);
+            justify-self: center;
+            width: 80%;
+
+        }
+
+        #translate label {
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+
+        .square {
+            width: 100%;
+        }
+
+        #closeBtn {
+            transform: scale(1.25);
+            transform: translateY(-290px) scale(1.25) translateX(-25px);
+        }
+
+        #translate h3 {
+            font-size: 1.75em;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #end_form {
+            text-align: center;
+            grid-column: 1/3;
+
+        }
+
+        #end_form section {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #submit {
+            transform: scale(1.25);
+        }
+        
+        .check {
+            transform: scale(1.2);
+        }
+
+        #images {
+            width: 576px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 5px;
+            margin: 0;
+            border-radius: 0 0 35px 35px;
+            overflow: hidden;
+            padding-left: 12px;
+            padding-right: 12px;
+            transform: translateY(150px);
+        }
+
+        .imgs {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <div id="jesus_container">
+            <img id="jesus" src="images/jesus_feeds_5000.jpeg" alt="Jesus Christ">
+            <h1>Daily Feed</h1>
+            <h2>Scripture a Day</h2>
+        </div>
+
+        <div id="translate">
+                <h3>Sign Up for Daily Scripture Feed</h3>
+            <form id="myForm">
+                <button type="button" id="closeBtn">X</button>
+                <div id="grid">
+                    <div>
+                        <label for="username">User Name:</label>
+                    </div>
+                    <div>
+                        <input class="square" type="text" id="username" name="username" required>
+                    </div>
+                    <div>       
+                        <label for="password">Password:</label>
+                    </div>
+                    <div>
+                        <input class="square" type="password" id="password" name="password" required>
+                    </div> 
+                    <div>
+                        <label for="email">Email:</label>
+                    </div>
+                    <div>
+                        <input class="square" type="email" id="email" name="email" required>
+                    </div>
+
+                    <label>Gender:</label>
+                    <div>
+                        <input class="check" type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label class="check" for="female">Female</label>
+                    </div>
+                    <div id="end_form">
+                        <section>
+                            <input class="check" type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to newsletter</label>
+                        </section>
+
+                        <section>
+                            <input class="check" type="checkbox" id="conditions" name="conditions" required>
+                            <label for="conditions">I acknowledge the terms and conditions</label>
+                        </section>
+
+                        <section>
+                            <button id="submit" type="submit">Submit</button>
+                        </section>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="images">
+            <div>
+                <img class="imgs" src="images/old_testament.webp" alt="old testament">
+            </div>
+            <div>
+                <img class="imgs" src="images/new_testament.webp" alt="new testament">
+            </div>
+            <div>
+                <img class="imgs" src="images/book_of_mormon.webp" alt="book of mormon">
+            </div>
+            <div>
+                <img class="imgs" src="images/doctrine_and_covenants.webp" alt="doctrine and covenants">
+            </div>
+            <div>
+                <img class="imgs" src="images/pearl_of_great_price.webp" alt="pearl_of_great_price">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
