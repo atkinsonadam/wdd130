@@ -215,18 +215,27 @@ nav a:hover {
 
 
 /* Start Form */
+#margin_form {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
 
 #form_container {
     border: solid 2px #065a82;
     padding: 5vw;
     border-radius: 3vw;
     text-align: center;
+    width: 100%;
+    justify-self: center;
+
 }
 
 #form_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px
+    gap: 10px;
+    text-align: left;
+    width: 100%;
 }
 
 #form_container h2 {
@@ -240,8 +249,10 @@ nav a:hover {
 }
 
 .label_container {
-
+    width: 60%;
     margin-bottom: 5px;
+    margin: 0 auto;
+
 }
 
 .label {
