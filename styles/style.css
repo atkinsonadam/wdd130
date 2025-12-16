@@ -343,9 +343,14 @@ footer {
 
 /* End Grid Ice Section*/
 
+#gen_exp_ref {
+    margin-top: 30px;
+    grid-column: 1/3;
+}
+
 #client_developer_grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5vw;
     width: 100%;
 }
