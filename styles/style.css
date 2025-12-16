@@ -343,3 +343,9 @@ footer {
 
 /* End Grid Ice Section*/
 
+#client_developer_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5vw;
+    width: 100%;
+}
